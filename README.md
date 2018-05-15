@@ -1,4 +1,4 @@
-# BMS电池监控
+# wz
 
 ## 前提条件
 - [Git 1.9+](http://git-scm.com/downloads)
