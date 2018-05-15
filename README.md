@@ -1,4 +1,4 @@
-# wz
+# wz_web
 
 ## 前提条件
 - [Git 1.9+](http://git-scm.com/downloads)
