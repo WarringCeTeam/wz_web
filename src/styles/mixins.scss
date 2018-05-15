@@ -1,0 +1,106 @@
+// 背景图片地址和大小
+@mixin bis($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// 宽高
+@mixin wh($width, $height){
+  width: $width;
+  height: $height;
+}
+
+// padding
+@mixin pd($value){
+  padding: $value;
+}
+
+// padding
+@mixin mg($value){
+  margin: $value;
+}
+
+// borderRadius
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 字体大小，颜色
+@mixin sc($size, $color){
+  font-size: $size;
+  color: $color;
+}
+
+//定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位上下居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.el-switch--wide .el-switch__label.el-switch__label--left span,.el-switch--wide .el-switch__label.el-switch__label--right span{font-size: 12px;}
+
+// 表格padding
+.el-table .cell{
+  padding-left: 2px;
+  padding-right:2px;
+}
+table .cell label.el-checkbox{
+  width: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.modal .main .el-progress__text{
+ /* color:#fff;*/
+  font-size: 10px !important;
+}
+.modal .left .el-progress__text{
+  /* color:#fff;*/
+  font-size: 26px !important;
+}
+.l-progress .el-icon-circle-cross, .l-progress el-progress__text{
+  width: 36px;
+  font-size:10px !important;
+}
+.l-progress .el-progress{
+  margin-top: 5px;
+}
+.signal_name .el-card__body{
+  padding:0;
+}
+.c .el-date-editor--time-select input.el-input__inner{
+  /*border-left: none !important;*/
+  border-left-radius: none !important;
+}
+
+.login_content .hy-switch .slotText{
+  color: #fff !important;
+  font-weight: normal !important;
+}
+.login_content .hy-switch .innerClasses{
+  border:#ccc solid 1px !important;
+}
+.el-autocomplete-suggestion .el-scrollbar ul li{
+  font-size: 12px !important;
+}

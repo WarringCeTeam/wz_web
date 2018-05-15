@@ -1,0 +1,284 @@
+@import 'src/styles/vars';
+@import 'src/styles/mixins';
+
+.content {
+  margin-top: 1%;
+  @include wh(100%, 97%);
+  .content-title {
+    margin: 0 15px;
+    color: #2b2a2a;
+    font-weight: 500;
+    padding: 0 15px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 14px;
+    background: $white;
+    box-shadow: 0 1px 5px 1px #e0e0e0;
+    .content-btn {
+      height: 100%;
+      float: right;
+      text-align: right;
+    }
+  }
+  // 搜索部分
+  .hy-search-bar {
+    box-shadow: 0 1px 5px 1px #e0e0e0;
+    margin: 0 15px;
+    background: $white;
+    padding: 15px;
+    .hy-search-input {
+      input {
+        border-radius: 18px;
+        padding: 3px 15px;
+      }
+    }
+    .hy-search-button {
+      border-radius: 18px;
+    }
+    .hy-search-add {
+      background-color: #36a972;
+      border-color: #36a972;
+      &:hover,
+      &:focus {
+        background-color: #2e8b57;
+        border-color: #2e8b57;
+      }
+      &:active {
+        background-color: #228b22;
+        border-color: #228b22;
+      }
+      i {
+        line-height: 1;
+      }
+    }
+  }
+  //table-content
+  .table-content {
+    margin: 0 15px;
+    background: #FFF;
+    min-height: calc(100% - 136px);
+    box-shadow: 0 1px 5px 1px #e0e0e0;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 67px;
+    .padding {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .el-table__header-wrapper {
+      border-color: #F1F1F1;
+    }
+    .el-table {
+      color: #797979;
+      border: none;
+      &::before {
+        height: 0;
+        background-color: transparent;
+      }
+      &::after {
+        width: 0;
+      }
+      th {
+        background: #fafafa;
+        height: 45px;
+        .cell {
+          height: 30px;
+          line-height: 30px;
+          color: #2b2a2a;
+        }
+      }
+      td{
+        height: 45px;
+        .cell {
+          height: 30px;
+          line-height: 30px;
+          color: #797979;
+        }
+      }
+      /*.cell {
+        height: 30px;
+        line-height: 30px;
+        //color: #797979;
+      }*/
+      td, th.is-leaf {
+        border-color: #f2f2f2;
+      }
+    }
+  }
+  .content-body {
+    border-top:1px solid #f2f2f2;
+    margin: 0 15px;
+    padding: 40px 15px;
+    background: #FFFFFF;
+    min-height: calc(100% - 85px);
+  }
+  .hy-default-btn {
+    cursor: pointer !important;
+    border-radius: 18px;
+    background: #CFCFCF;
+    border-color: #CFCFCF;
+    color: #6a737c;
+    &:hover,
+    &:focus {
+      background: #e5e5e5;
+      border-color: #e5e5e5;
+    }
+    &:active {
+      background: #CFCFCF;
+      border-color: #CFCFCF;
+    }
+  }
+  span.detail {
+    font-size: 14px;
+    display: inline-block;
+    color: #797979;
+    vertical-align: middle;
+  }
+}
+.l-detail{
+  .el-form-item{
+    background: #fff;
+    margin-bottom: 10px;
+    border-bottom: 1px #f1f1f1 solid;
+  }
+  .el-form-item__label {
+    font-size: 12px;
+    color: #000;
+    background: #fff;
+  }
+  .el-form-item__content{
+    font-size: 12px;
+    padding-left:8px;
+    color: #666;
+  }
+}
+
+.el-form-item__label, .el-form-item__content{
+  font-size: 12px;
+}
+.el-table {
+  color: #959595;
+  border-color: #f2f2f2;
+  &::before {
+    height: 0;
+    background-color: transparent;
+  }
+  &::after {
+    width: 0;
+  }
+  th {
+    background: #fafafa;
+  }
+  td, th {
+    height: 45px;
+  }
+  .cell {
+    height: 30px;
+    line-height: 30px;
+  }
+  td, th.is-leaf {
+    border-color: #f2f2f2;
+  }
+}
+
+.el-table__footer-wrapper thead div, .el-table__header-wrapper thead div {
+  background: #fafafa;
+  color: #6a737c;
+}
+
+.el-date-editor.el-input {
+  width: 100%;
+}
+
+.mr5 {
+  margin-right: 5px !important;
+}
+
+.cicle {
+  border-radius: 18px;
+}
+
+.el-select,
+.el-autocomplete {
+  display: block;
+}
+
+.el-select.cicle .el-input__inner,
+.el-autocomplete.cicle .el-input__inner {
+  border-radius: 18px;
+  padding: 3px 15px;
+}
+.el-input__inner{
+  font-size:12px;
+}
+
+// 滚动条
+.iScrollBox_y {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  border-radius: 3px;
+  height: 100%;
+  background: transparent;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.iScrollBar_y {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+  height: 50px;
+  cursor: pointer;
+  background: #35888d;
+}
+.detail_file {
+  display: inline-block;
+  width: 260px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  border: 1px dashed #d9d9d9;
+}
+
+/*2017-11-23 lyx*/
+a.tz{
+  color: #4f80e1;
+  cursor: pointer;
+}
+a.tz:hover{
+  color: #0000ff;
+  text-decoration: underline;
+}
+/*列表按钮*/
+.l_action_btn{
+  float: right;
+  margin-left:10px;
+  padding:6px;
+  width:36px;
+  height:36px;
+  background: #f1f1f1;
+  border:none;
+}
+.iconfont{
+  left:50% !important;
+  top:52% !important;
+}
+.clear{
+  zoom:1;
+  clear: both;
+}
+
+body{
+  /*min-width: 800px;
+    overflow: auto;*/
+}
