@@ -1,8 +1,8 @@
 /**
  * 描述：路由文件
  */
-import App from '../../App';
-import Wab from '../../web';
+// import App from '../../App';
+import Web from '../../web';
 
 // 404
 const _404 = r => require.ensure([], () => r(require('../../page/404/404')), '_404');
@@ -18,6 +18,7 @@ const home = r => require.ensure([], () => r(require('../../page/main/home/home'
 
 // web 前端页面
 const index = r => require.ensure([], () => r(require('../../page/web/home/home')), 'index');
+const webLogin = r => require.ensure([], () => r(require('../../page/web/login/login')), 'webLogin');
 
 export default [
   // 未匹配到则404页面
@@ -26,22 +27,26 @@ export default [
     component: _404
   },
   {
-    path: '/web/',
-    component: Wab,
-    children: [
-        {
-          path: 'home',
-          component: index
-        }
-    ]
-  },
-  {
     path: '/',
-    component: App,
+    component: Web,
     children: [
       {
         path: '',
-        redirect: 'login'
+        redirect: 'web/login'
+      },
+      {
+        path: '/web/',
+        component: Web,
+        children: [
+          {
+            path: 'home',
+            component: index
+          },
+          {
+            path: 'login',
+            component: webLogin
+          }
+        ]
       },
       {
         path: '404',

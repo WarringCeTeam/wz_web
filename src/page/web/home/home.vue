@@ -23,7 +23,8 @@
   <div style="background: #fff; width:100%; height:100%;">
     <transition name="fade">
     <div class="l-home">
-      <img src="/static/images/index.png" width="700">
+      微职招聘网站
+      <p><br>——开发中，敬请期待——</p>
     </div>
     </transition>
   </div>

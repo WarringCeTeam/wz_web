@@ -238,11 +238,11 @@
                 <div class="login_content clearfix">
                     <div class="input_item min_logo"><img src="/static/images/left_name.png" alt="logo" width="100"/></div>
                     <div class="input_item clearfix">
-                      <i class="ic"><img src="../../images/user2.png" width="20" height="20" /></i>
+                      <i class="ic"><img src="../../../images/user2.png" width="20" height="20" /></i>
                       <input type="text" autocomplete="off" class="form-control" v-bubble="{duration: 3000, end: 100, color: '#0c9577'}" v-model="loginInfo.username" placeholder="用户名" />
                     </div>
                     <div class="input_item clearfix">
-                      <i class="ic"><img src="../../images/m2.png" width="20" height="20" /></i>
+                      <i class="ic"><img src="../../../images/m2.png" width="20" height="20" /></i>
                       <input type="password" autocomplete="new-password" v-bubble="{duration: 1000, end: 50}" class="form-control" v-model="loginInfo.password" placeholder="密码" />
                     </div>
                     <div class="input_item">

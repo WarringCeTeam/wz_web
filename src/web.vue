@@ -8,7 +8,6 @@
 </style>
 <template>
     <transition name="fade" mode="out-in">
-      <div>web页面</div>
         <router-view></router-view>
     </transition>
 </template>

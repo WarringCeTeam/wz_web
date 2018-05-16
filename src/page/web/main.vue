@@ -47,18 +47,18 @@
     border-bottom-left-radius:20px;
     border:3px #f8f9fb solid;
     cursor:pointer;
-  i{
-    float: left;
-    margin-top:11px;
-    margin-left:6px;
-    margin-right:4px;
-  }
-  span{
-    float: left;
-    font-size:12px;
-    line-height: 32px;
-    color:#626b74;
-  }
+    i{
+      float: left;
+      margin-top:11px;
+      margin-left:6px;
+      margin-right:4px;
+    }
+    span{
+      float: left;
+      font-size:12px;
+      line-height: 32px;
+      color:#626b74;
+    }
   }
 </style>
 <template>
@@ -70,16 +70,9 @@
       <!--<hy-header></hy-header>-->
       <!--内容部分-->
       <div class="hy-main">
-        <transition  name="fade">
-          <!--进度条-->
-          <hy-upload v-show="taskModal" :test="downLoadData"></hy-upload>
-        </transition>
-        <div class="l-sidebar_btn" @click="changeClose()" v-show="taskBtn" style="margin-top: 40px;">
-          <i class="r con l-icon l-icon-close"></i>
-          <span>{{taskModal == true ? '收起':'任务ing'}}</span>
-        </div>
+        <div>web页面</div>
         <transition name="slide-both" mode="out-in">
-          <router-view v-if="!taskModal"></router-view>
+          <router-view></router-view>
         </transition>
       </div>
     </div>
