@@ -171,7 +171,7 @@
         height:100%;
       }
       .min_logo{
-        display: none;
+
       }
     }
     @media screen and (max-width:1009px){
@@ -230,7 +230,7 @@
                   <!--<div class="clear"></div>-->
                 <!--</div>-->
                 <div class="login_content clearfix">
-                    <div class="input_item min_logo">微职网站登录</div>
+                    <div class="input_item min_logo" style="font-size: 29px;color: #fff;">微职网站登录</div>
                     <div class="input_item clearfix">
                       <i class="ic"><img src="../../../images/user2.png" width="20" height="20" /></i>
                       <input type="text" autocomplete="off" class="form-control" v-bubble="{duration: 3000, end: 100, color: '#0c9577'}" v-model="loginInfo.username" placeholder="用户名" />

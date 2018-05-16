@@ -19,6 +19,7 @@ const home = r => require.ensure([], () => r(require('../../page/main/home/home'
 // web 前端页面
 const index = r => require.ensure([], () => r(require('../../page/web/home/home')), 'index');
 const webLogin = r => require.ensure([], () => r(require('../../page/web/login/login')), 'webLogin');
+const webMap = r => require.ensure([], () => r(require('../../page/web/map/map')), 'webMap');
 
 export default [
   // 未匹配到则404页面
@@ -45,6 +46,10 @@ export default [
           {
             path: 'login',
             component: webLogin
+          },
+          {
+            path: 'map',
+            component: webMap
           }
         ]
       },
