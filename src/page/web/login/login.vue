@@ -6,7 +6,7 @@
     .main-login {
         @include wh(100%, 100%);
         position: fixed;
-        background: url('/static/images/spotALL.png') repeat repeat #3b96d5 center;
+        background: url('/static/images/bg.png') repeat repeat #fff center;
         background-size: cover;
         canvas{
             display: block;
@@ -40,7 +40,6 @@
       transform: translate3d(0, -50%, 0);
       position: absolute;
       top: 50%;
-      background: url('/static/images/bg04.png') no-repeat center;
       background-size: cover;
       /*background: -webkit-linear-gradient(to left, transparent, #4fa2db, transparent);*/
     }
@@ -97,7 +96,7 @@
         margin: 0;
         display: block;
         width: 100%;
-        background: #2177b2;
+        background: #6c6f6d;
         appearance: none;
         cursor: pointer;
         border: none;
@@ -147,7 +146,6 @@
       .login_content {
         width:100%;
         height:100%;
-        border-left:1pt #3b96d5 solid;
       }
       .min_logo{
         display: none;
@@ -156,11 +154,8 @@
     }
     @media screen and (min-width: 1010px) and (max-width: 1600px) {
       .login {
-        float: right;
-        padding:90px 20px;
-        margin-left:4%;
-        width: 30%;
-        max-width:500px;
+        margin:0 auto;
+        width:500px;
       }
       .inner{
         width:80%;
@@ -174,7 +169,6 @@
       .login_content {
         width:100%;
         height:100%;
-        border-left:1pt #3b96d5 solid;
       }
       .min_logo{
         display: none;
@@ -220,23 +214,23 @@
         <transition :name="transition">
           <div class="inner_kuang">
             <div class="inner">
-              <div class="left_icon" style=""><img src="/static/images/left.png" alt="logo" width="100%"/></div>
+              <!--<div class="left_icon" style="">微职网站登录</div>-->
               <div class="login" v-show="showLogin" @keydown.enter="login()">
-               <!-- <div class="logo">
-                    <img src="../../images/c.png" alt="logo" width="280" height="34"/>
-                </div>-->
-                <!--<div class="login_bg">
+               <!--<div class="logo">-->
+                    <!--<img src="../../../images/c.png" alt="logo" width="280" height="34"/>-->
+                <!--</div>-->
+                <!--<div class="login_bg">-->
 
-                  <img src="../../images/k.png" alt="logo"/>
-                  <img src="../../images/k.png" alt="logo" style="transform:rotate(90deg);position: absolute;margin-left:320px;"/>
-                  <div class="clear"></div>
-                  <img src="../../images/k.png" alt="logo" style="transform:rotate(270deg);position: absolute;margin-top:250px;"/>
-                  <div class="clear"></div>
-                  <img src="../../images/k.png" alt="logo" style="transform:rotate(180deg);position: absolute;margin-left:360px;margin-top:250px;"/>
-                  <div class="clear"></div>
-                </div>-->
+                  <!--<img src="../../../images/k.png" alt="logo"/>-->
+                  <!--<img src="../../../images/k.png" alt="logo" style="transform:rotate(90deg);position: absolute;margin-left:320px;"/>-->
+                  <!--<div class="clear"></div>-->
+                  <!--<img src="../../../images/k.png" alt="logo" style="transform:rotate(270deg);position: absolute;margin-top:250px;"/>-->
+                  <!--<div class="clear"></div>-->
+                  <!--<img src="../../../images/k.png" alt="logo" style="transform:rotate(180deg);position: absolute;margin-left:360px;margin-top:250px;"/>-->
+                  <!--<div class="clear"></div>-->
+                <!--</div>-->
                 <div class="login_content clearfix">
-                    <div class="input_item min_logo"><img src="/static/images/left_name.png" alt="logo" width="100"/></div>
+                    <div class="input_item min_logo">微职网站登录</div>
                     <div class="input_item clearfix">
                       <i class="ic"><img src="../../../images/user2.png" width="20" height="20" /></i>
                       <input type="text" autocomplete="off" class="form-control" v-bubble="{duration: 3000, end: 100, color: '#0c9577'}" v-model="loginInfo.username" placeholder="用户名" />
